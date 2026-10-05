@@ -1,0 +1,11 @@
+{
+  "name": "codemonkey",
+  "owner": { "name": "Joosep Suuder" },
+  "plugins": [
+    {
+      "name": "codemonkey",
+      "source": "./",
+      "description": "Plan → review → failing tests → implementation pipeline for Claude Code."
+    }
+  ]
+}

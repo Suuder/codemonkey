@@ -1,0 +1,6 @@
+{
+  "name": "codemonkey",
+  "description": "Plan → review → failing tests → implementation pipeline for Claude Code, driven by four subagents.",
+  "version": "1.0.0",
+  "author": { "name": "Joosep Suuder" }
+}
