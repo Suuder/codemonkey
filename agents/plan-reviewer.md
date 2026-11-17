@@ -14,10 +14,12 @@ Check every factual claim in the plan against the source code. Look for:
 - Acceptance criteria that are vague or can't be tested
 - A test strategy that uses the wrong command, location or framework
 - Scope creep, or a noticeably simpler approach
+- A **Flow: before / after** that doesn't match the code (Before) or the Proposed changes (After), or that leaves out a changed step
+- Silent assumptions: decisions about intended behavior, scope or user-visible results that the plan makes without support from the problem statement, `user-feedback.md` or the code, and that are missing from its Open questions or Assumptions
 
 Write `<workdir>/review.md`:
 - One entry per finding, marked **BLOCKING** or **NIT**, each with a `path:line` reference and a suggested fix.
-- BLOCKING means the plan as written would produce broken or incorrect code, or tests that don't test the right thing. Everything else is a NIT.
+- BLOCKING means the plan as written would produce broken or incorrect code, or tests that don't test the right thing. A silent assumption that would change behavior if it were wrong is also BLOCKING. Write it as `Question for user: <question>` with the options, and the orchestrator will ask it. Everything else is a NIT.
 - The last line must be exactly one of:
   `VERDICT: APPROVED`
   `VERDICT: CHANGES_REQUIRED`
